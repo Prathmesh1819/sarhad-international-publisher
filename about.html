@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Sarhad International Publisher</title>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("sarhad-theme") || "light";
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="about">
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">
+          <img src="assets/sarhad-logo.png" alt="Sarhad College Logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <span class="brand-fallback">SIP</span>
+        </span>
+        <span>
+          <strong>Sarhad International Publisher</strong>
+          <small>College Academic Publishing Platform</small>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"></button>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="submit.html">Submit Work</a>
+        <a href="publications.html">Publications</a>
+        <a href="admin.html">Admin</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth.html" class="nav-button" id="authNavLink">Login / Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">About The Platform</p>
+        <h1>Supporting student research, review, and publication.</h1>
+        <p>
+          Sarhad International Publisher is designed as a college-level digital publishing platform that gives
+          students a complete research workflow from submission to public publication.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-layout">
+        <article class="info-card">
+          <h2>Our Mission</h2>
+          <p>
+            We aim to create a structured environment where student authors can submit scholarly work,
+            receive administrative review, and share approved research with the wider academic community.
+          </p>
+        </article>
+        <article class="info-card">
+          <h2>How It Works</h2>
+          <p>
+            Students log in, upload their research papers in PDF format, and track the review outcome.
+            Admins evaluate each submission, add remarks, and publish approved papers to the public archive.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section accent-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Platform Values</p>
+            <h2>Why this system feels like a real publisher</h2>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Structured Submission</h3>
+            <p>Articles include title, abstract, category, author details, and a PDF document upload.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Review-Based Approval</h3>
+            <p>Admins can approve or reject submissions and add remarks to simulate an editorial process.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Public Publication</h3>
+            <p>Only approved work appears on the public publications page for reading and downloading.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Academic Categories</h3>
+            <p>Arts, Commerce, and Science are supported for undergraduate bachelor-level submissions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Sarhad International Publisher</h3>
+        <p>Encouraging academic writing, peer-style review, and accessible digital publishing.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="submit.html">Submit Work</a>
+        <a href="publications.html">Publications</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: contact@sarhadpublisher.edu</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Sarhad International Publisher. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

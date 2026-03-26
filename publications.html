@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications | Sarhad International Publisher</title>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("sarhad-theme") || "light";
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="publications">
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">
+          <img src="assets/sarhad-logo.png" alt="Sarhad College Logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <span class="brand-fallback">SIP</span>
+        </span>
+        <span>
+          <strong>Sarhad International Publisher</strong>
+          <small>College Academic Publishing Platform</small>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"></button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="submit.html">Submit Work</a>
+        <a href="publications.html" class="active">Publications</a>
+        <a href="admin.html">Admin</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth.html" class="nav-button" id="authNavLink">Login / Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Public Research Archive</p>
+        <h1>Read approved and published academic work.</h1>
+        <p>Search by title or author, filter by category, and open or download the research PDF.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="toolbar">
+          <div class="input-group">
+            <label for="searchPublications">Search by title or author</label>
+            <input type="search" id="searchPublications" placeholder="Search publications">
+          </div>
+          <div class="input-group">
+            <label for="filterCategory">Filter category</label>
+            <select id="filterCategory">
+              <option value="All">All Categories</option>
+              <option value="Arts">Arts</option>
+              <option value="Commerce">Commerce</option>
+              <option value="Science">Science</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Artificial Intelligence">Artificial Intelligence</option>
+              <option value="Machine Learning">Machine Learning</option>
+              <option value="Space Science">Space Science</option>
+              <option value="Environmental Studies">Environmental Studies</option>
+              <option value="Education">Education</option>
+              <option value="Economics">Economics</option>
+              <option value="Psychology">Psychology</option>
+            </select>
+          </div>
+        </div>
+        <div class="card-grid" id="publicationsGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Sarhad International Publisher</h3>
+        <p>Publicly showcasing approved college-level research and scholarly writing.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="submit.html">Submit Work</a>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h4>Reader Access</h4>
+        <p>Browse approved academic work and open the published documents directly from this archive.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Sarhad International Publisher. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

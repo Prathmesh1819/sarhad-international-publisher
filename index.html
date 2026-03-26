@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarhad International Publisher | Academic Publishing Platform</title>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("sarhad-theme") || "light";
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">
+          <img src="assets/sarhad-logo.png" alt="Sarhad College Logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <span class="brand-fallback">SIP</span>
+        </span>
+        <span>
+          <strong>Sarhad International Publisher</strong>
+          <small>College Academic Publishing Platform</small>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"></button>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="submit.html">Submit Work</a>
+        <a href="publications.html">Publications</a>
+        <a href="admin.html">Admin</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth.html" class="nav-button" id="authNavLink">Login / Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Academic Excellence, Digitally Published</p>
+          <h1>Publish student research with a real academic workflow.</h1>
+          <p class="hero-copy">
+            Sarhad International Publisher helps students submit research articles, lets admins review them,
+            and showcases approved work as a professional college publication archive.
+          </p>
+          <div class="hero-actions">
+            <a href="submit.html" class="button button-primary">Submit Your Article</a>
+            <a href="publications.html" class="button button-secondary">Browse Publications</a>
+          </div>
+          <div class="stats-grid">
+            <article>
+              <strong id="heroSubmissionCount">120+</strong>
+              <span>Student Submissions</span>
+            </article>
+            <article>
+              <strong id="heroPublicationCount">48+</strong>
+              <span>Published Papers</span>
+            </article>
+            <article>
+              <strong id="heroAuthorCount">32+</strong>
+              <span>Active Authors</span>
+            </article>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="panel-card">
+            <h2>Publishing Workflow</h2>
+            <div class="timeline">
+              <div><span>1</span><p>Student submits article and PDF</p></div>
+              <div><span>2</span><p>Admin reviews content and adds remarks</p></div>
+              <div><span>3</span><p>Approved work is published publicly</p></div>
+              <div><span>4</span><p>Readers explore, read, and download</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Featured Archive</p>
+            <h2>Featured publications</h2>
+          </div>
+          <a href="publications.html" class="text-link">View All Publications</a>
+        </div>
+        <div class="card-grid" id="featuredPublications"></div>
+      </div>
+    </section>
+
+    <section class="section accent-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Recognising Contributors</p>
+            <h2>Top authors</h2>
+          </div>
+        </div>
+        <div class="author-grid" id="topAuthors"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Sarhad International Publisher</h3>
+        <p>A beginner-friendly academic publishing platform for college projects and research showcases.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="about.html">About</a>
+        <a href="submit.html">Submit Work</a>
+        <a href="publications.html">Publications</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: contact@sarhadpublisher.edu</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Sarhad International Publisher. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

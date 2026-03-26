@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Sarhad International Publisher</title>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("sarhad-theme") || "light";
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">
+          <img src="assets/sarhad-logo.png" alt="Sarhad College Logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <span class="brand-fallback">SIP</span>
+        </span>
+        <span>
+          <strong>Sarhad International Publisher</strong>
+          <small>College Academic Publishing Platform</small>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"></button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="submit.html">Submit Work</a>
+        <a href="publications.html">Publications</a>
+        <a href="admin.html">Admin</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="auth.html" class="nav-button" id="authNavLink">Login / Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Get In Touch</p>
+        <h1>Contact the publishing office.</h1>
+        <p>Use this page for support, editorial queries, or help with article submission.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-layout">
+        <article class="panel-card">
+          <h2>Contact Information</h2>
+          <p><strong>Email:</strong> contact@sarhadpublisher.edu</p>
+          <p><strong>Phone:</strong> +91 98765 43210</p>
+          <p><strong>Office Hours:</strong> Monday to Friday, 10:00 AM to 5:00 PM</p>
+          <p><strong>Address:</strong> Academic Publishing Cell, Sarhad Campus, Pune, Maharashtra</p>
+        </article>
+
+        <article class="panel-card">
+          <h2>Send a message</h2>
+          <form id="contactForm" class="form-grid">
+            <div class="input-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group full-width">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" rows="6" placeholder="Write your message" required></textarea>
+            </div>
+            <div class="full-width action-row">
+              <button type="submit" class="button button-primary">Send Message</button>
+            </div>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Sarhad International Publisher</h3>
+        <p>Helping students turn research into published academic output.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="publications.html">Publications</a>
+      </div>
+      <div>
+        <h4>Need Support?</h4>
+        <p>Reach out for help with submission guidance, publication workflow, or platform support.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Sarhad International Publisher. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

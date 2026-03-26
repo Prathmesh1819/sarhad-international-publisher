@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Work | Sarhad International Publisher</title>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("sarhad-theme") || "light";
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="submit">
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">
+          <img src="assets/sarhad-logo.png" alt="Sarhad College Logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <span class="brand-fallback">SIP</span>
+        </span>
+        <span>
+          <strong>Sarhad International Publisher</strong>
+          <small>College Academic Publishing Platform</small>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"></button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="submit.html" class="active">Submit Work</a>
+        <a href="publications.html">Publications</a>
+        <a href="admin.html">Admin</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth.html" class="nav-button" id="authNavLink">Login / Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Author Submission Portal</p>
+        <h1>Submit your article for academic review.</h1>
+        <p>Log in as a student or author, submit your article with a public PDF link, and track its publishing status from one place.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container dashboard-grid">
+        <div class="panel-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Submission Form</p>
+              <h2>Upload new work</h2>
+            </div>
+          </div>
+          <form id="submissionForm" class="form-grid">
+            <div class="input-group">
+              <label for="articleTitle">Article Title</label>
+              <input type="text" id="articleTitle" placeholder="Enter article title" required>
+            </div>
+            <div class="input-group">
+              <label for="articleCategory">Category</label>
+              <select id="articleCategory" required>
+                <option value="">Select category</option>
+                <option value="Arts">Arts</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Science">Science</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="Space Science">Space Science</option>
+                <option value="Environmental Studies">Environmental Studies</option>
+                <option value="Education">Education</option>
+                <option value="Economics">Economics</option>
+                <option value="Psychology">Psychology</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="input-group hidden" id="otherCategoryGroup">
+              <label for="otherCategory">Specify Other Category</label>
+              <input type="text" id="otherCategory" placeholder="Enter your topic or category">
+            </div>
+            <div class="input-group full-width">
+              <label for="articleDescription">Abstract / Description</label>
+              <textarea id="articleDescription" rows="6" placeholder="Write a short summary of your article" required></textarea>
+            </div>
+            <div class="input-group full-width">
+              <label for="articlePdfLink">Public PDF Link</label>
+              <input type="url" id="articlePdfLink" placeholder="Paste a public Google Drive or direct PDF URL" required>
+            </div>
+            <div class="full-width action-row">
+              <button type="submit" class="button button-primary">Submit Article</button>
+            </div>
+          </form>
+          <div class="empty-state" id="submitAuthMessage">
+            <h3>Login required</h3>
+            <p>Please log in from the authentication page before submitting your work.</p>
+            <a href="auth.html" class="button button-secondary">Go to Login</a>
+          </div>
+        </div>
+
+        <aside class="panel-card">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Author Dashboard</p>
+              <h2>Your submissions</h2>
+            </div>
+          </div>
+          <div id="userSubmissionList" class="list-stack"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Sarhad International Publisher</h3>
+        <p>Submit your scholarly work and follow its editorial journey.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="about.html">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <p>Submit your academic work for review and publication through the college platform.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Sarhad International Publisher. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

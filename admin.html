@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Sarhad International Publisher</title>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("sarhad-theme") || "light";
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">
+          <img src="assets/sarhad-logo.png" alt="Sarhad College Logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <span class="brand-fallback">SIP</span>
+        </span>
+        <span>
+          <strong>Sarhad International Publisher</strong>
+          <small>College Academic Publishing Platform</small>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"></button>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="submit.html">Submit Work</a>
+        <a href="publications.html">Publications</a>
+        <a href="admin.html" class="active">Admin</a>
+        <a href="contact.html">Contact</a>
+        <a href="auth.html" class="nav-button" id="authNavLink">Login / Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Editorial Control Panel</p>
+        <h1>Review submissions and publish approved research.</h1>
+        <p>Manage article review decisions, remarks, and publication status from one place.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="dashboard-summary" id="adminSummary">
+          <article class="summary-card">
+            <span>Pending</span>
+            <strong id="pendingCount">0</strong>
+          </article>
+          <article class="summary-card">
+            <span>Approved</span>
+            <strong id="approvedCount">0</strong>
+          </article>
+          <article class="summary-card">
+            <span>Rejected</span>
+            <strong id="rejectedCount">0</strong>
+          </article>
+          <article class="summary-card">
+            <span>Published</span>
+            <strong id="publishedCount">0</strong>
+          </article>
+        </div>
+
+        <div class="empty-state" id="adminAccessMessage">
+          <h3>Admin access required</h3>
+          <p>Please log in with an authorized administrator account to continue.</p>
+          <a href="auth.html" class="button button-secondary">Admin Login</a>
+        </div>
+
+        <div class="list-stack" id="adminSubmissionList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Sarhad International Publisher</h3>
+        <p>Editorial review and controlled publication for academic credibility.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Admin Note</h4>
+        <p>Use the remarks field while reviewing to leave editorial comments for the author.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Sarhad International Publisher. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
