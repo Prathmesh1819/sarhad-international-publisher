@@ -426,13 +426,32 @@ function setupAuthHandlers() {
         await updateDoc(doc(db, "users", state.currentUser.uid), {
           name: updatedName
         });
+
+        const authorSubmissionQuery = query(
+          collection(db, "submissions"),
+          where("authorId", "==", state.currentUser.uid)
+        );
+        const authorSubmissionSnapshot = await getDocs(authorSubmissionQuery);
+        await Promise.all(
+          authorSubmissionSnapshot.docs.map((submissionDoc) =>
+            updateDoc(doc(db, "submissions", submissionDoc.id), {
+              authorName: updatedName
+            })
+          )
+        );
+
         state.currentUserProfile = {
           ...state.currentUserProfile,
           name: updatedName
         };
+        await Promise.all([
+          loadUserSubmissions(),
+          loadPublications(),
+          loadAdminSubmissions()
+        ]);
         renderCurrentUserCard();
         editNameForm.classList.add("hidden");
-        showToast("Name updated successfully.");
+        showToast("Name updated successfully across your profile and submissions.");
       } catch (error) {
         showToast(getFriendlyErrorMessage(error, "profile"));
       }
